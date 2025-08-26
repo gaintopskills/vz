@@ -1,0 +1,118 @@
+.reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    opacity: 0; /* Initially hidden */
+    will-change: opacity, transform; /* Hint browser to optimize */
+    animation: fadeIn 0.8s ease-out forwards;
+    background-blend-mode: overlay;
+    backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px); /* Safari Support */ 
+     position: absolute; /* or fixed */
+     width:100%;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.reviews a {
+    color: white;
+    text-decoration: none;
+    font-display: swap; /* Ensures text loads immediately */
+}
+.reviews-content {
+    flex: 1;
+    padding: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-right: 30px;
+    text-align: center;
+    max-width: 380px;
+}
+/* Desktop & Mobile Toggling */
+.reviews-content .desktop {
+    display: block;
+}
+.reviews-content .mobile {
+    display: none !important; /* Ensures override */
+}
+/* License Image Section */
+.header-licenses-foto {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+.header-licenses-foto img {
+    width: auto;
+    display: block; /* Prevents unwanted extra space */
+
+}
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .reviews-content {
+        padding: 5px;
+        margin-right: 10px;
+        max-width: 250px;
+    }
+    .header-licenses-foto {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .header-licenses-foto img {
+        max-height: 60px;
+    }
+}
+@media (max-width: 940px) {
+    .reviews-content {
+        padding: 5px;
+        margin-right: 10px;
+        max-width: 200px;
+    }
+    .header-licenses-foto {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .header-licenses-foto img {
+        max-height: 50px;
+    }
+}
+@media (min-width: 784px) {
+    .reviews-content-mobile {
+        display: none !important; /* Ensures override */
+    }
+}
+/* Responsive for Mobile */
+@media (max-width: 784px) {
+    .reviews {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;}
+        .reviews {
+            background-color: #000 !important; /* Solid black for better performance */
+            backdrop-filter: none !important;
+    }
+    .reviews-content {
+        display: none !important; /* Ensures override */
+    }
+    .header-licenses-foto {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+    .header-licenses-foto img {
+        max-height: 33px;
+    }
+}

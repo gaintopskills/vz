@@ -1,0 +1,109 @@
+/*Offers*/
+.wrapper {
+  max-width: 1400px;
+  padding: 0; /* smaller horizontal padding */
+  margin: 0 auto;
+}
+.wrapper h3{
+  font-size: 1rem;
+  text-align: center;
+}
+.cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 5px;
+  
+  }
+  .col {
+    width: calc(25% - 2rem); /* ⬅️ Change from 30% to 25% */
+    aspect-ratio: 1 / 1;
+    margin: 1rem;
+    cursor: pointer;
+    perspective: 1000px;
+  }
+  .container {
+    transform-style: preserve-3d;
+    height: 100%;
+  }
+  .front,
+  .back {
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-position: center;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    backface-visibility: hidden;
+    text-align: center;
+    height: 100%;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px groove rgba(224, 192, 141, 0.4);
+    box-shadow: 0 0 10px rgba(224, 192, 141, 0.25);
+  }
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotateY(180deg);
+    background: radial-gradient(
+      ellipse at center,
+      rgba(44, 34, 22, 0.5),
+      rgba(90, 70, 50, 0.3),
+      rgba(0, 0, 0, 0.6)
+    );
+    padding:10px;
+  }
+  .container:hover .front,
+  .hover .front {
+    transform: rotateY(-180deg);
+  }
+  .container:hover .back,
+  .hover .back {
+    transform: rotateY(0);
+  }
+  .front .inner p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding:0 10px 0 10px;
+  }
+  .front .inner span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+  }
+  @media screen and (max-width: 79rem) {
+    .col {
+      width: calc(33.3% - 2rem);
+    }
+  }
+  @media screen and (max-width: 57rem) {
+    .col {
+      width: calc(50% - 2rem);
+    }
+  }
+  @media screen and (max-width: 44rem) {
+    .col {
+      width: calc(80% - 2rem);
+    }
+  }
+  @media screen and (max-width: 25rem) {
+    .col {
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+  }
+  .front {
+    position: relative;
+    overflow: hidden;
+  }
+  .front .inner {
+    position: relative;
+    z-index: 2;
+  }
+ /* End Ofers*/

@@ -1,0 +1,171 @@
+.tabs-container {
+    max-width: 100%;
+    margin: 20px auto;
+    border: 3px solid rgba(224, 192, 141, 0.4);
+    border-radius: 5px;
+    background-color: #000;
+  }
+  
+  .tabs-layout {
+    display: flex;
+    min-height: 500px; /* Makes sure height is stable */
+  }
+  
+  .tabs-sidebar {
+    flex: 1;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  .tabs-title {
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 2px solid rgba(224, 192, 141, 0.4);
+    transition: background-color 0.3s ease;
+  }
+  .tabs-title.active {
+    background-color: #333;
+  }
+  
+  .tabs-content {
+    flex: 3;
+    padding: 20px;
+    background-color: #000;
+    position: relative;
+  }
+  
+  .tab-panel {
+    display: none;
+    animation: fadeIn 0.3s ease;
+  }
+  .tab-panel.active-tab {
+    display: block;
+  }
+  
+  .tabs-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .tabs-button {
+    padding: 10px 20px;
+    background-color: #990000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+  }
+  
+  .accordion-mobile {
+    background-color: #000;
+    color: white;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .accordion-header {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .accordion-content {
+    padding: 15px;
+    background-color: #000;
+  }
+  
+  .accordion-icon {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .accordion-content,
+  .tab-panel {
+    overflow: hidden; /* Clear floats */
+  }
+  
+  /* Optional: responsive override */
+  @media (max-width: 768px) {
+    .image-float {
+      float: none;
+      width: 100%!important;
+      margin: 0 5px 20px 5px;
+    }
+  }
+  .tab-body {
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .tabs-image-left {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    flex-shrink: 0;
+  }
+  .tab-body-float {
+    overflow: hidden; /* Clear float properly */
+  }
+  
+  /*.image-float {
+    float: right;
+    width: 400px;
+    height: auto;
+    margin: 0 20px 20px 0;
+    border-radius: 5px;
+  }*/
+
+  .image-float {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 215, 0, 0.5); /* soft gold glow */
+    box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.6),
+      0 0 15px rgba(255, 215, 0, 0.3); /* outer gold glow */
+  
+    margin: 20px;
+    float: right;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Center on mobile */
+  @media (max-width: 768px) {
+  .image-float {
+    float: none;
+    display: block;
+    margin: auto;
+    max-width: 360px;
+    max-height: 360px;
+  }
+  }

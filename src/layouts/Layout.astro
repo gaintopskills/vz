@@ -1,0 +1,72 @@
+---
+import MegaMenu from '../components/MegaMenu.jsx';
+import Reviews from '../components/Reviews.jsx';
+import { Brands } from '../components/Brands.jsx'
+import Footer from '../components/Footer.jsx';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import type { BreadcrumbItem } from '../components/Breadcrumbs.astro';
+interface Props {
+	title?: string;
+	description?: string;
+	type?: 'website' | 'article';
+	structuredData?: object;
+	breadcrumbs?: BreadcrumbItem[];
+	canonical?: string;
+}
+const { 
+	title = "Luxury Appliance Repair by ZARICCI",
+	description = "Welcome to Luxury Appliance Repair by ZARICCI, your go to high-end apploiance repair company you can trust",
+	type = "website",
+	structuredData,
+	breadcrumbs = [],
+	canonical
+} = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'http://localhost:4321');
+
+const defaultStructuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": title,
+	"description": description,
+	"url": canonicalURL.toString()
+};
+const finalStructuredData = structuredData || defaultStructuredData;
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" sizes="512x512">
+      <style is:global>
+    @import '../styles/critical.css';
+  </style>
+		<link rel="preload" href="/bg.mp4" as="video" type="video/mp4">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
+		<script type="application/ld+json" set:html={JSON.stringify(finalStructuredData)} />	
+		
+		</head>
+	<body>
+	<MegaMenu client:idle />
+	<!--<Reviews client:idle />-->
+		{breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
+		<main style="margin-top: 4rem;">
+			<slot />
+		</main>
+		<!--<Brands client:visible/>-->
+		<Footer client:visible/>
+		
+	</body>
+</html>

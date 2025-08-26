@@ -1,0 +1,95 @@
+/*Footer*/
+footer {
+    padding: 4rem 1.5rem;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    .footer-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .footer-brand h4 {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .footer-brand p {
+    font-size: 0.875rem;
+    max-width: 280px;
+  }
+  .footer-section h4 {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #ffffff;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-section a:hover {
+    color: #ffffff;
+  }
+  
+  .footer-contact p {
+  
+    font-size: 0.875rem;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .footer-social a {
+    color: #ffffff;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-social a:hover {
+    color: #ffffff;
+  }
+  
+  .footer-social svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #1a1a1a;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #9c9b9b;
+  }
+  /* End Footer*/
+  
+  /*Ofers*/
+  

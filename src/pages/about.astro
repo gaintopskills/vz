@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": "Welcome to Luxury Appliance Repair by Zaricci",
+	"description": "High-End Appliance Repair services",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Zaricci",
+	},
+	"datePublished": new Date().toISOString(),
+	"dateModified": new Date().toISOString()
+};
+// Example breadcrumbs for the home page
+const breadcrumbs = [
+	{ text: 'Welcome' }
+];
+---
+
+<Layout
+	title="Dedicated Team for Luxury Appliance Repair"
+	description="decades of combined experience in Luxury Appliance Repair, working with top-tier brands like Sub-Zero, Viking, Wolf, Thermador, and Miele"
+	structuredData={structuredData}
+>
+<div style="margin: 50px">
+<section>
+  <h2>About Zaricci – Your Dedicated Team for Luxury Appliance Repair</h2>
+  <p>At <strong>Luxury Appliance Repair by Zaricci</strong>, we don’t just fix machines; we nurture relationships built on trust, integrity, and exceptional craftsmanship. Our passion for high-end appliance service began years ago when we recognized the unique needs of homeowners investing in premium appliances—and we’ve been perfecting our craft ever since.</p>
+</section>
+
+<section>
+  <h3>A Legacy of Excellence</h3>
+  <ul>
+    <li><strong>Deep Industry Roots:</strong> Our founders have decades of combined experience in Luxury Appliance Repair, working with top-tier brands like Sub-Zero, Viking, Wolf, Thermador, and Miele.</li>
+    <li><strong>Expert Training:</strong> Each technician undergoes rigorous certification programs, ensuring a precise approach to Sub-Zero refrigerator repair, Thermador oven servicing, and everything in between.</li>
+    <li><strong>State-of-the-Art Techniques:</strong> We stay ahead of the curve by continually updating our methods and tools, enabling us to handle emerging technologies in premium appliances.</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Our Mission</h3>
+  <p>We aim to deliver reliable, high-quality service that extends the lifespan of your luxury appliances, while providing a stress-free customer experience. We believe everyone deserves a home powered by efficient, problem-free machines, and we’re here to make that a reality.</p>
+</section>
+
+<section>
+  <h3>Our Values</h3>
+  <ul>
+    <li><strong>Customer-Centric Approach:</strong> Your comfort and convenience are our top priorities. From scheduling appointments around your timetable to offering transparent pricing, we tailor our services to fit your needs.</li>
+    <li><strong>Quality Above All:</strong> We use genuine replacement parts for every high-end appliance service—never compromising on the quality and performance your appliances deserve.</li>
+    <li><strong>Respect & Professionalism:</strong> Our team treats your home like our own, ensuring cleanliness, safety, and respect at every visit.</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Why Choose Luxury Appliance Repair by Zaricci?</h3>
+  <ul>
+    <li><strong>Brand Expertise:</strong> From Miele dishwashers to Wolf ranges, we have the knowledge and hands-on experience to tackle any repair challenge.</li>
+    <li><strong>Long-Term Relationships:</strong> Our loyal clientele appreciates our honest, dependable approach—and we’re grateful for the referrals that keep us growing.</li>
+    <li><strong>Continual Improvement:</strong> We invest in ongoing training to remain at the forefront of innovation in high-end appliance service.</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Ready to Meet the Team?</h3>
+  <p>If you value premium appliance care delivered by professionals who genuinely care, you’ve come to the right place. Contact us today to learn more about our services or to schedule an appointment. We can’t wait to show you why homeowners trust <strong>Luxury Appliance Repair by Zaricci</strong> for all their luxury appliance repair needs.</p>
+</section>
+
+</div>
+
+
+</Layout>
+
