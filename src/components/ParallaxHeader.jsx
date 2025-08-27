@@ -13,7 +13,7 @@ const ParallaxHeader = () => {
         playsInline
       >
         <source
-          src="/bg.mp4"
+          src="/vega-zarici-traveling-rings.mp4"
           type="video/mp4"
           media="(min-width: 769px)"
         />
