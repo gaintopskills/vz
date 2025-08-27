@@ -1,173 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ParallaxHeader from '../components/ParallaxHeader.jsx'
-import Services from '../components/Services.jsx'
-import { TabsAccordion } from '../components/TabsAccordion.jsx'
 import '../styles/global.css';
 import '../styles/index.css';
 
 const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://luxuryappliance.repair",
-  "name": "Luxury Appliance Repair by Zaricci",
-  "image": "https://luxuryappliance.repair/zaricci-logo.webp",
-  "url": "https://luxuryappliance.repair",
-  "telephone": "+1-424-499-7788",
-  "priceRange": "$$$",
-  "description": "Luxury Appliance Repair by Zaricci provides high-end, in-home appliance repair services across Los Angeles and surrounding cities. We specialize in servicing premium brands like Sub-Zero, Wolf, Miele, Thermador, and more. Our certified technicians deliver expert, white-glove repair solutions with same-day availability.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "814 S. Westgate Ave",
-    "addressLocality": "Los Angeles",
-    "addressRegion": "CA",
-    "postalCode": "90049",
-    "addressCountry": "US"
-  },
- "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 34.0522715,
-    "longitude": -118.4697833
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "08:00",
-      "closes": "20:00"
-    }
-  ],
-  "areaServed": [
-    { "@type": "City", "name": "Los Angeles", "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles" },
-    { "@type": "City", "name": "Burbank", "sameAs": "https://en.wikipedia.org/wiki/Burbank,_California" },
-    { "@type": "City", "name": "Alhambra", "sameAs": "https://en.wikipedia.org/wiki/Alhambra,_California" },
-    { "@type": "City", "name": "Glendale", "sameAs": "https://en.wikipedia.org/wiki/Glendale,_California" },
-    { "@type": "City", "name": "Pasadena", "sameAs": "https://en.wikipedia.org/wiki/Pasadena,_California" },
-    { "@type": "City", "name": "South Pasadena", "sameAs": "https://en.wikipedia.org/wiki/South_Pasadena,_California" },
-    { "@type": "City", "name": "Brentwood", "sameAs": "https://en.wikipedia.org/wiki/Brentwood,_Los_Angeles" },
-    { "@type": "City", "name": "Bel Air", "sameAs": "https://en.wikipedia.org/wiki/Bel_Air,_Los_Angeles" },
-    { "@type": "City", "name": "Pacific Palisades", "sameAs": "https://en.wikipedia.org/wiki/Pacific_Palisades" },
-    { "@type": "City", "name": "Santa Monica", "sameAs": "https://en.wikipedia.org/wiki/Santa_Monica,_California" },
-    { "@type": "City", "name": "Beverly Hills", "sameAs": "https://en.wikipedia.org/wiki/Beverly_Hills,_California" },
-    { "@type": "City", "name": "Monterey Park", "sameAs": "https://en.wikipedia.org/wiki/Monterey_Park,_California" },
-    { "@type": "City", "name": "Thousand Oaks", "sameAs": "https://en.wikipedia.org/wiki/Thousand_Oaks,_California" },
-    { "@type": "City", "name": "Universal City", "sameAs": "https://en.wikipedia.org/wiki/Universal_City,_California" },
-    { "@type": "City", "name": "West Hollywood", "sameAs": "https://en.wikipedia.org/wiki/West_Hollywood,_California" },
-    { "@type": "City", "name": "San Marino", "sameAs": "https://en.wikipedia.org/wiki/San_Marino,_California" },
-    { "@type": "City", "name": "Malibu", "sameAs": "https://en.wikipedia.org/wiki/Malibu,_California" }
-  ],
-  "makesOffer": {
-    "@type": "Offer",
-    "itemOffered": {
-      "@type": "Service",
-      "name": "Luxury Appliance Repair Services",
-      "description": "In-home repair services for high-end appliances such as refrigerators, ovens, cooktops, dishwashers, and laundry units. Brands serviced include Sub-Zero, Wolf, Thermador, Miele, Viking, and more. Available across Los Angeles and surrounding areas.",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Los Angeles Metropolitan Area"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "Luxury Appliance Repair by Zaricci"
-      }
-    }
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Appliance Repair Services",
-    "itemListElement": [
-   { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Oven Repair", "description": "Precision oven repair services for luxury brands, including convection, steam, and wall-mounted ovens." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stove Repair", "description": "High-end stove repair, including gas and electric models from premium manufacturers like Wolf and Viking." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Range Repair", "description": "Expert range repair for dual-fuel, gas, and induction units from top-tier brands." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cooktop Repair", "description": "Professional repair for gas, electric, and induction cooktops by brands like Bosch, Miele, and KitchenAid." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Range Hood Repair", "description": "Servicing designer and built-in range hoods with issues such as lighting, motors, or venting." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Washing Machine Repair", "description": "Luxury washer repair for front-load, top-load, and smart models, including Miele and LG Signature." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dryer Repair", "description": "In-home dryer repair for gas and electric units with vent or heating issues." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dishwasher Repair", "description": "Dishwasher repair services for built-in and panel-ready units from Miele, Bosch, and more." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microwave Repair", "description": "Built-in microwave repair for drawer, over-the-range, and luxury convection microwave models." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Refrigerator Repair", "description": "Certified refrigerator repair for built-in and integrated models, including Sub-Zero and Thermador." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Freezer Repair", "description": "Freezer repair for upright, drawer, and column units with cooling or defrost issues." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fireplace Repair", "description": "Repair services for electric and gas fireplaces, including ignition, remote control, and burner issues." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "BBQ Grill Repair", "description": "Outdoor BBQ and grill repair for built-in and freestanding models, including burner and ignition repair." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wine Cooler Repair", "description": "Luxury wine cooler repair services for dual-zone and built-in models from brands like Sub-Zero and Liebherr." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wine Cellar Repair", "description": "Specialized wine cellar repair for climate control systems, lighting, and humidity regulation." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Built-In Coffee Machine Repair", "description": "Repair for integrated coffee systems from brands like Miele and Gaggenau, including grinder, brew unit, and steam wand issues." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Steam Oven Repair", "description": "Expert steam oven repair for luxury models with water tank, sensor, or steam generation problems." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Warming Drawer Repair", "description": "Warming drawer repair for built-in units, including thermostat and heating element issues." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Speed Oven / Combi-Oven Repair", "description": "Repair services for combination microwave and convection ovens with high-end control systems." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ice Maker Repair", "description": "In-home repair for built-in and undercounter ice makers from Sub-Zero, Scotsman, and other luxury brands." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trash Compactor Repair", "description": "Repair for premium trash compactors with drawer, motor, or compression issues." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beverage Center Repair", "description": "Service for built-in beverage centers and drink fridges from U-Line, Perlick, and True Residential." }},
-  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kegerator Repair", "description": "Commercial and residential kegerator repair including cooling, taps, and CO2 systems." }}
-    ]
-  },
-  "brand": [
-    { "@type": "Brand", "name": "AGA" },
-    { "@type": "Brand", "name": "Big Chill" },
-    { "@type": "Brand", "name": "BlueStar" },
-    { "@type": "Brand", "name": "Bosch" },
-    { "@type": "Brand", "name": "Dacor" },
-    { "@type": "Brand", "name": "Fisher & Paykel" },
-    { "@type": "Brand", "name": "Gaggenau" },
-    { "@type": "Brand", "name": "Jenn-Air" },
-    { "@type": "Brand", "name": "KitchenAid" },
-    { "@type": "Brand", "name": "La Cornue" },
-    { "@type": "Brand", "name": "Miele" },
-    { "@type": "Brand", "name": "Smeg" },
-    { "@type": "Brand", "name": "Sub-Zero" },
-    { "@type": "Brand", "name": "Thermador" },
-    { "@type": "Brand", "name": "Viking" },
-    { "@type": "Brand", "name": "Wolf" },
-    { "@type": "Brand", "name": "Elmira Stove Works" },
-    { "@type": "Brand", "name": "Monogram" },
-    { "@type": "Brand", "name": "Cove" },
-    { "@type": "Brand", "name": "Bertazzoni" },
-    { "@type": "Brand", "name": "ZLINE" },
-    { "@type": "Brand", "name": "ILVE" },
-    { "@type": "Brand", "name": "Fulgor Milano" },
-    { "@type": "Brand", "name": "Lacanche" },
-    { "@type": "Brand", "name": "Robam" },
-    { "@type": "Brand", "name": "Signature Kitchen Suite" },
-    { "@type": "Brand", "name": "True Residential" },
-    { "@type": "Brand", "name": "Hestan" },
-    { "@type": "Brand", "name": "Whirlpool Black Stainless" },
-    { "@type": "Brand", "name": "JennAir Noir" }
-  ],
-   "potentialAction": [
-    {
-      "@type": "ReserveAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://luxuryappliance.repair/book/",
-        "inLanguage": "en",
-        "actionPlatform": [
-          "http://schema.org/DesktopWebPlatform",
-          "http://schema.org/MobileWebPlatform"
-        ]
-      },
-      "result": {
-        "@type": "Reservation",
-        "name": "Service Appointment"
-      }
-    },
-    {
-      "@type": "CommunicateAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "tel:+14244997788",
-        "actionPlatform": [
-          "http://schema.org/MobileWebPlatform"
-        ]
-      }
-    }
-   ]
 }
 ---
 
@@ -177,26 +14,80 @@ const structuredData = {
 	structuredData={structuredData}
 >
 <ParallaxHeader client:idle/>
-<Services client:visible/>
 <div class="wrapper">
-<section>
-  <h2>We Are a Leading Luxury Appliance Repair Company Specializing in High-End Brands</h2>
-  <p>From Miele and Gaggenau to La Cornue, our seasoned technicians have the know-how to diagnose and fix any issue. Whether it’s a Sub-Zero refrigerator repair or a Thermador oven malfunction, count on us to restore your appliance’s performance—and your peace of mind.</p>
-</section>
-<section>
-  <h3>Experience our Difference in Premium Appliance Repair</h3>
-  <ul>
-    <li><strong>Skilled Technicians:</strong> Our team is highly trained in the latest techniques for high-end appliance service.</li>
-    <li><strong>Genuine Parts:</strong> We use only manufacturer-approved components for Sub-Zero repair, Viking repair, Wolf repair, Thermador repair, and beyond, ensuring quality you can trust.</li>
-    <li><strong>Prompt Response:</strong> Same-day service for most luxury appliance repairs, getting you back on track in no time.</li>
-    <li><strong>Transparent Pricing:</strong> No hidden fees or surprise costs—just honest quotes tailored to your specific repair needs.</li>
-    <li><strong>Satisfaction Guarantee:</strong> Our work is backed by a 3-month warranty.</li>
-  </ul>
-</section>
+<section id="hero">
+<p>
+  I am not another so-called biohacker chasing performance — tricking the body into temporary boosts of focus, sleep, or productivity through overstimulation and supplement megadosing. My approach is different: I’m designing longevity by asking a deeper question — <strong>what does my body and mind need to act younger according to their genetic blueprint?</strong> What does my biology need to restore its own NAD+, copper peptides, collagen, hyaluronic acid, and the thousands of other molecules that define youth — instead of endlessly shoving fragments of them back in through pills, peptides, and IV drips? 
+</p>
 
-<section>
-  <p><strong>At Luxury Appliance Repair</strong>, we take pride in making your home a place of uncompromising comfort and convenience. Allow us to protect your investment with our exceptional premium appliance repair services in your area.</p>
-</section>
+<p>
+  Like others, I am chasing youth. But unlike most, I believe it’s truly possible — with today’s science, self-experimentation, and the accelerating power of AI. For me, this is not about optimization; it’s about <strong>a return to biological youth</strong> — complete DNA and cellular rejuvenation back to age 20.
+</p>
+
+<p>
+  I’m documenting every step of this journey, sharing the protocols, and building a system that works synergistically — not just one hack or supplement, but a lifestyle designed to reprogram the way my genes express youth. I may not succeed, but I am determined to try to put this puzzle together. In just two months of fully committing, I’ve already begun to see and feel changes — and that alone is inspiring. It makes me ask: <strong>just how far can we actually go?</strong> 
+</p>
+
+<p>
+  They say aim for the stars and you might land on the moon. For me, this is exactly that kind of journey — an exploration of what’s possible. And I want to share it openly, to inspire others to take control of their health and realize just how much power we truly have.
+</p>
+
+
+  </section>
+
+  <!-- What Makes My Approach Different -->
+  <section id="approach">
+    <h2>What Makes My Approach Different</h2>
+    <p><strong>Most biohackers</strong> focus on quick wins — peptides, one-off supplements, or tech gadgets.<br />
+    <strong>My philosophy</strong> is systemic:</p>
+    <ul>
+      <li>🧬 <strong>DNA Methylation Reset</strong> → foods and nutrients that rewrite how genes express.</li>
+      <li>💧 <strong>True Hydration</strong> → structured water + minerals to restore the extracellular matrix.</li>
+      <li>♻️ <strong>Detoxification & Enzyme Therapy</strong> → clearing fibrosis, glycation, heavy metals, and cellular “rust.”</li>
+      <li>🌞 <strong>Natural Rhythms</strong> → sleep, light therapy, and sun exposure, not just artificial hacks.</li>
+      <li>🏃 <strong>Movement & Flow</strong> → strength, daily hiking, circulation for stem cell activation.</li>
+      <li>⚡ <strong>Synergy Over Isolation</strong> → nothing in my protocol works alone. Every element is designed to amplify the others.</li>
+    </ul>
+    <p>I’m not just slowing aging — I’m actively <strong>remodeling my tissues, mitochondria, and hormones</strong> back toward youth.</p>
+  </section>
+
+  <!-- Longevity Stack -->
+  <section id="stack">
+    <h2>Explore My Longevity Stack</h2>
+    <ul>
+      <li><strong>Supplements I Take</strong> → from tocotrienols &amp; shilajit to methyl donors &amp; adaptogens.</li>
+      <li><strong>Devices I Use</strong> → infrared sauna, cryotherapy, red light therapy, hydrogen water, grounding.</li>
+      <li><strong>Books That Shaped Me</strong> → the thinkers and researchers guiding my journey.</li>
+    </ul>
+    <p>(Each links to affiliate recommendations with personal notes on why I use them.)</p>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog">
+    <h2>Blog &amp; Research Notes</h2>
+    <p>I break down longevity topics into clear, actionable insights:</p>
+    <ul>
+      <li>How I’m using systemic enzymes to dissolve fibrosis and glycation.</li>
+      <li>The role of structured water in cellular rejuvenation.</li>
+      <li>Why most “biohackers” miss the God-gene connection in epigenetics.</li>
+      <li>Protocols I’ve tested — what worked, what didn’t.</li>
+    </ul>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter">
+    <h2>Join My Journey</h2>
+    <p>I’m not a guru. I’m a living experiment.<br />
+    Subscribe to my newsletter to follow my protocols, supplement tests, and biological age results.</p>
+    <a href="/newsletter" class="btn">Join My Longevity Notes →</a>
+  </section>
+
+  <!-- Footer Callout -->
+  <section id="footer-cta">
+    <blockquote>
+      “The future of health isn’t optimization. It’s rejuvenation.”
+    </blockquote>
+    <p>Follow me as I explore how far we can go in turning back the biological clock.</p>
+  </section>
 </div>
-<!--<TabsAccordion client:visible/>-->
 </Layout>
