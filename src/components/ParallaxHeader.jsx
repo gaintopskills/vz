@@ -21,7 +21,7 @@ const ParallaxHeader = () => {
       </video>
 
       <div className="maintext">
-        <h1>I’m Vega Zaricci. I Believe in Our Power to Design Longevity.</h1>
+        <h1>I’m Vega Zaricci, and my mission is simple: to prove the fountain of youth is within us — and to help you activate it.</h1>
         
       </div>
     </div>
