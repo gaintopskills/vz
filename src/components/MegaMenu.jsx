@@ -81,7 +81,7 @@ export const MegaMenu = () => {
               
               <div className="row">       
                 {[
-                  [{ label: "All The Supplements", href: "/oven-repair/" },
+                  [{ label: "All The Supplements", href: "/supplements/" },
                   ],
                 ].map((col, idx) => (
                   <div className="column" key={idx}>
@@ -101,6 +101,38 @@ export const MegaMenu = () => {
               </div>
             </div>
           </div>
+
+            {/* Home Dropdown */}
+            <div className="dropdown">
+          <button className="dropbtn" onClick={() => handleDropdownToggle("Household")}>
+  Food List <ArrowIcon isOpen={openDropdown === "Services"} />
+</button>
+            <div className={`dropdown-content ${openDropdown === "Household" ? "show" : ""}`}>
+              
+              <div className="row">       
+                {[
+                  [{ label: "All the Food", href: "/foods/" },
+                  ],
+                ].map((col, idx) => (
+                  <div className="column" key={idx}>
+                    {col.map((item) =>
+                      typeof item === "string" ? (
+                        <a key={item} href="#">
+                          {/* <img src={`/svg/${item.split(" ")[0].toLowerCase()}.svg`} alt={item} /> */} {item}
+                        </a>
+                      ) : (
+                        <a key={item.label} href={item.href}>
+                          {/* <img src={`/svg/${item.label.split(" ")[0].toLowerCase()}.svg`} alt={item.label} /> */} {item.label}
+                        </a>
+                      )
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+
           {/* Commercial Dropdown */}
         
              {/* Areas Dropdown 
