@@ -57,7 +57,7 @@ export const MegaMenu = () => {
         <div className="first-row">
           {/* Logo */}
           <a className="logo logo-desktop" href="/">
-  <img width="140" height="37" alt="Logo" src="/logo.webp" />
+  <img width="140" height="37" alt="Logo" src="/vegazariccilogo.webp" />
 </a>
 <a className="logo-mobile" href="/">
   <img width="25" height="25" alt="Mobile Logo" src="/logo-mobile.png" loading="lazy" />
